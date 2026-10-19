@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #ff443f;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+   section {
+        padding: 30px 5%;
+        gap: 20px;
+    }
+
+    section img {
+        max-width: 100%;
+    }
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 4%;
+    background-color: #ffffff;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+section img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+}
+
+.curso,
+.opcao,
+.perfil {
+    min-height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 30px 4%;
+    gap: 8px;
+}
+
+.curso h2 {
+    font-size: 28px;
+}
+
+.perfil img,
+.opcao img {
+    max-width: 120px;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 150px 4% 40px;
+    background-color: #ffffff;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    align-content: start;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.header-pequeno {
+    min-height: auto;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background-color: #f59eaa;
+    z-index: 0;
+}
+
+header h2 {
+    position: absolute;
+    z-index: 2;
+    top: 35px;
+    left: 4%;
+
+    background-color: #ffffff;
+    color: #c52e2e;
+
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+header h1 {
+    position: relative;
+    z-index: 1;
+
+    grid-column: 1;
+    grid-row: 1;
+
+    margin-top: 15px;
+    margin-bottom: 20px;
+
+    font-size: clamp(42px, 5vw, 68px);
+    font-weight: 900;
+    color: #ff443f;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 0 #222222;
+}
+
+header p {
+    position: relative;
+    z-index: 1;
+
+    grid-column: 1;
+    grid-row: 2;
+
+    max-width: 300px;
+    margin-bottom: 18px;
+
+    color: #d93832;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.btn {
+    position: relative;
+    z-index: 1;
+
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: start;
+
+    display: inline-block;
+    text-decoration: none;
+
+    background-color: #ffc9c7;
+    color: #c52e2e;
+
+    padding: 12px 20px;
+    border-radius: 25px;
+
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+
+    box-shadow: 0 3px 5px #00000015;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #c52e2e;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+header ul {
+    position: absolute;
+    z-index: 2;
+
+    top: 40px;
+    right: 4%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    list-style: none;
+    background-color: #bf2d29;
+    padding: 5px;
+    border-radius: 30px;
+}
+
+header ul li a {
+    display: block;
+
+    text-decoration: none;
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    padding: 12px 20px;
+    border-radius: 25px;
+
+    transition: 0.3s;
+}
+
+header ul li a:hover {
+    background-color: #ffffff;
+    color: #c52e2e;
+}
+
+@media (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr;
+        padding: 200px 5% 40px;
+        column-gap: 0;
+    }
+
+    header::before {
+        height: 170px;
+    }
+
+    header h1 {
+        grid-column: 1;
+        grid-row: 1;
+        font-size: clamp(36px, 8vw, 52px);
+    }
+
+    header p {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .btn {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    header ul {
+        top: 90px;
+        right: 3%;
+        left: 3%;
+        gap: 2px;
+    }
+
+    header ul li a {
+        padding: 10px 12px;
+        font-size: 11px;
+    }
+
+
+}
